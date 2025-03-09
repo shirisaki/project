@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Religions Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .quiz-container {
+            background: white;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .btn {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: darkgreen;
+        }
+        .close-btn {
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-bottom: 10px;
+        }
+        .close-btn:hover {
+            background: darkred;
+        }
+        </style>
+        <script>
+           
+                    function goToHomePage() {
+            window.location.href = "index.html";
+        }
+    </script>
+        
+        
+    
+        
+   
+    <script>
+        function calculateScore() {
+            let score = 0;
+            const answers = {
+                q1: "c",
+                q2: "c",
+                q3: "c",
+                q4: "b",
+                q5: "b",
+                q6: "b",
+                q7: "a",
+                q8: "b",
+                q9: "c",
+                q10: "c",
+                q11: "true",
+                q12: "false",
+                q13: "true",
+                q14: "false",
+                q15: "true",
+                q16: "true",
+                q17: "false",
+                q18: "true",
+                q19: "false",
+                q20: "false",
+            }
+            
+            for (let key in answers) {
+                let selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
+            }
+            
+            document.getElementById("result").innerText = `Your score: ${score}/20`;
+        }
+    </script>
+</head>
+<body>
+    <div class="quiz-container">
+        <button class="close-btn" onclick="goToHomePage()">X</button>
+        <h2>World Religions and Belief Systems Quiz</h2>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Which of the following is the holy book of Islam?</p>
+                <input type="radio" name="q1" value="a"> a) Bible <br>
+                <input type="radio" name="q1" value="b"> b) Torah <br>
+                <input type="radio" name="q1" value="c"> c) Quran <br>
+                <input type="radio" name="q1" value="d"> d) Vedas <br>
+            </div>
+            
+            <div class="question">
+                <p>2. Who is considered the founder of Buddhism?</p>
+                <input type="radio" name="q2" value="a"> a) Confucius <br>
+                <input type="radio" name="q2" value="b"> b) Laozi <br>
+                <input type="radio" name="q2" value="c"> c) Siddhartha Gautama <br>
+                <input type="radio" name="q2" value="d"> d) Guru Nanak <br>
+            </div>
+            
+            <div class="question">
+                <p>3. The Five Pillars of Islam include all EXCEPT:</p>
+                <input type="radio" name="q3" value="a"> a) Charity (Zakat) <br>
+                <input type="radio" name="q3" value="b"> b) Pilgrimage to Mecca (Hajj) <br>
+                <input type="radio" name="q3" value="c"> c) Belief in multiple gods <br>
+                <input type="radio" name="q3" value="d"> d) Daily prayers (Salat) <br>
+            </div>
+            
+            <div class="question">
+                <p>4. In Hinduism, which god is known as the "Preserver"?</p>
+                <input type="radio" name="q4" value="a"> a) Brahma <br>
+                <input type="radio" name="q4" value="b"> b) Vishnu <br>
+                <input type="radio" name="q4" value="c"> c) Shiva <br>
+                <input type="radio" name="q4" value="d"> d) Krishna <br>
+            </div>
+            
+            <div class="question">
+                <p>5. Which religion follows the Eightfold Path to enlightenment?</p>
+                <input type="radio" name="q5" value="a"> a) Christianity <br>
+                <input type="radio" name="q5" value="b"> b) Buddhism <br>
+                <input type="radio" name="q5" value="c"> c) Islam <br>
+                <input type="radio" name="q5" value="d"> d) Sikhism <br>
+            </div>
+            
+            <div class="question">
+                <p>6. What is the main sacred text of Judaism?</p>
+                <input type="radio" name="q6" value="a"> a) The Quran <br>
+                <input type="radio" name="q6" value="b"> b) The Torah <br>
+                <input type="radio" name="q6" value="c"> c) The Bhagavad Gita <br>
+                <input type="radio" name="q6" value="d"> d) The Tripitaka <br>
+            </div>
+            
+            <div class="question">
+                <p>7. Sikhism was founded in which country?</p>
+                <input type="radio" name="q7" value="a"> a) India <br>
+                <input type="radio" name="q7" value="b"> b) China <br>
+                <input type="radio" name="q7" value="c"> c) Japan <br>
+                <input type="radio" name="q7" value="d"> d) Iran <br>
+            </div>
+            
+            <div class="question">
+                <p>8. Which philosophy emphasizes harmony with nature and following "The Way" (Dao)?</p>
+                <input type="radio" name="q8" value="a"> a) Buddhism <br>
+                <input type="radio" name="q8" value="b"> b) Taoism <br>
+                <input type="radio" name="q8" value="c"> c) Confucianism <br>
+                <input type="radio" name="q8" value="d"> d) Hinduism <br>
+            </div>
+            
+            <div class="question">
+                <p>9. Which belief system follows the teachings of Confucius?</p>
+                <input type="radio" name="q9" value="a"> a) Hinduism <br>
+                <input type="radio" name="q9" value="b"> b) Sikhism <br>
+                <input type="radio" name="q9" value="c"> c) Confucianism <br>
+                <input type="radio" name="q9" value="d"> d) Islam <br>
+            </div>
+            
+            <div class="question">
+                <p>10. What is the main goal of Hinduism in achieving spiritual liberation?</p>
+                <input type="radio" name="q10" value="a"> a) Nirvana <br>
+                <input type="radio" name="q10" value="b"> b) Heaven <br>
+                <input type="radio" name="q10" value="c"> c) Moksha <br>
+                <input type="radio" name="q10" value="d"> d) Enlightenment <br>
+            </div>
+            <div> 
+                <p>11. The Dalai Lama is the spiritual leader of Tibetan Buddhism. (True/False)</p>
+                <input type="radio" name="q21" value="true"> True <br>
+                <input type="radio" name="q21" value="false"> False <br>
+            </div>
+
+            <div class="question">
+                <p>12. The Kaaba is a sacred site for Hindus. (True/False)</p>
+                <input type="radio" name="q22" value="true"> True <br>
+                <input type="radio" name="q12" value="false"> False <br>
+            </div>
+            
+            <div class="question">
+                <p>13. Buddhism originated in India. (True/False)</p>
+                <input type="radio" name="q13" value="true"> True <br>
+                <input type="radio" name="q13" value="false"> False <br>
+            </div>
+            
+            <div class="question">
+                <p>14. Hinduism is a monotheistic religion. (True/False)</p>
+                <input type="radio" name="q14" value="true"> True <br>
+                <input type="radio" name="q14" value="false"> False <br>
+            </div>
+            
+            <div class="question">
+                <p>15. The Eightfold Path is a core teaching of Buddhism. (True/False)</p>
+                <input type="radio" name="q15" value="true"> True <br>
+                <input type="radio" name="q15" value="false"> False <br>
+            </div>
+            
+            <div class="question">
+                <p>16. Islam is the youngest of the major world religions. (True/False)</p>
+                <input type="radio" name="q16" value="true"> True <br>
+                <input type="radio" name="q16" value="false"> False <br>
+            </div>
+            
+            <div class="question">
+                <p>17. Confucianism is a religion that worships a god. (True/False)</p>
+                <input type="radio" name="q17" value="true"> True <br>
+                <input type="radio" name="q17" value="false"> False <br>
+            </div>
+            
+            <div class="question">
+                <p>18. Sikhism believes in one God. (True/False)</p>
+                <input type="radio" name="q18" value="true"> True <br>
+                <input type="radio" name="q18" value="false"> False <br>
+            </div>
+            <div class="question">
+                <p>19. Zen Buddhism originated in Japan. (True/False)</p>
+                <input type="radio" name="q19" value="true"> True <br>
+                <input type="radio" name="q19" value="false"> False <br>
+            </div>
+            <div class="question">
+                <p>20. The Pope is the leader of the Eastern Orthodox Church. (True/False)</p>
+                <input type="radio" name="q20" value="true"> True <br>
+                <input type="radio" name="q20" value="false"> False <br>
+            </div>
+            
+            
+            <button type="button" class="btn" onclick="calculateScore()">Submit</button>
+        </form>
+        <h3 id="result"></h3>
+    </div>
+</body>
+</html>
+
